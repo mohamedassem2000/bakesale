@@ -12,11 +12,10 @@ class App extends React.Component {
     async componentDidMount(){
         const deals = await ajax.fetchInitialDeals();
         this.setState(()=> ({deals}));
-        }
-    }
+        };
 
   render() {
-      return (
+     { return (
         <View style= {styles.container}>
             {(this.state.deals.length > 0 ) ? 
                 ( <DealList deals={this.state.deals}/>) 
@@ -24,9 +23,9 @@ class App extends React.Component {
         </View>
         );
     }
- 
+    }
+}
 const styles = StyleSheet.create({
-
     container:{
         flex:1,
         justifyContent: 'center',
